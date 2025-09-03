@@ -29,7 +29,7 @@ const explorePage = () => {
     }, []);
 
     return (
-        <div className="flex flex-row flex-wrap">
+        <div className="flex flex-row flex-wrap justify-center">
             {exploreRecipe && exploreRecipe.map((item, index) =>
                 <RecipeCard key={index} {...item} />
             )}

@@ -23,7 +23,7 @@ const LogIn = () => {
 
     return (
         <form className="flex flex-col justify-center items-center border-1 rounded-4xl shadow-md p-3">
-            <h2 className="text-4xl p-3">Hi, log in to see the content!</h2>
+            <h2 className="text-4xl text-center p-3">Hi, log in to see the content!</h2>
             <div className="my-4 flex flex-col justify-center items-center">
                 <label htmlFor="username" className="font-bold">Username</label>
                 <input name="username" type="text" placeholder="username" className=" border-1 border-[#262522] rounded-2xl my-3 p-2" onChange={handleChange}/>

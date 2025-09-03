@@ -34,9 +34,9 @@ const ForYou = () => {
     }, [user]);
 
     return (
-        <div className="my-10 text-center border-1 border-[#26252246] rounded-4xl">
+        <div className="my-4 text-center border-1 border-[#26252246] rounded-4xl">
             <h2 className="font-bold text-4xl uppercase m-5">For You</h2>
-            <div className="flex flex-row flex-wrap gap-5 justify-center">
+            <div className="flex flex-col md:flex-row flex-wrap gap-5 justify-center">
                 {recipe && 
                     recipe.slice(0, 6).map((item, index) =>
                         <RecipeCard strMealThumb={""} key={index} {...item} />

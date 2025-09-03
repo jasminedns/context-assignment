@@ -28,11 +28,11 @@ const RecipePage = async ({ params }: Params) => {
             <h1 className="uppercase text-center text-3xl m-5">{recipeData.strMeal}</h1>
             <div className="flex flex-col justify-center">
                 <div>
-                    <img src={recipeData.strMealThumb} alt={recipeData.strMeal} className="w-[35%] h-auto rounded-4xl m-auto"/>
+                    <img src={recipeData.strMealThumb} alt={recipeData.strMeal} className="md:w-[35%] h-auto rounded-4xl m-auto"/>
                 </div>
-                <div className="flex flex-row justify-around items-center my-10">
-                    <p className="whitespace-pre-line my-10 text-center w-[50%]">{recipeData.strInstructions}</p>
-                    <div className="text-center border-1 border-[#26252246] rounded-4xl py-4 px-15">
+                <div className="flex flex-col md:flex-row justify-around items-center my-10">
+                    <p className="order-2 whitespace-pre-line my-10 text-center w-[90%] md:w-[50%]">{recipeData.strInstructions}</p>
+                    <div className="order-1 text-center md:border-1 border-[#26252246] rounded-4xl py-4 px-15">
                         <h3 className="font-bold text-2xl">Ingredients:</h3>
                         <div>
                             {measuresWithIngredients.map((item, index) =>

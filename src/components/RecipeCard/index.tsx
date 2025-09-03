@@ -54,11 +54,14 @@ const RecipeCard = ({strMeal, strMealThumb, idMeal}:RecipeCardProps) => {
 
     const saveRecipe = (meal:MealType) => {
         setFillColor("red")
-        setRecipes([...recipes, { name: meal.strMeal, id: meal.idMeal }]);
+        setRecipes([...recipes, {
+            name: meal.strMeal, id: meal.idMeal,
+            imgUrl: ""
+        }]);
     }
 
     return (
-        <div className="w-[25%] p-4">
+        <div className="lg:w-[25%] md:w-[40%] p-4">
             {   meal !== null 
                 ? 
                     <div className="border-1 border-[#26252246] rounded-4xl">
