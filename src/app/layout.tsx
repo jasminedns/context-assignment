@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import { SavedRecipesContextProvider, UserContextProvider } from "@/utils/contexts";
+import { FavoriteCategoryContextProvider, SavedRecipesContextProvider, UserContextProvider } from "@/utils/contexts";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -25,10 +25,12 @@ export default function RootLayout({
         className={`${roboto.className} antialiased`}
       >
         <UserContextProvider>
-          <SavedRecipesContextProvider>
-            <Header />
-              {children}
-          </SavedRecipesContextProvider>
+          <FavoriteCategoryContextProvider>
+            <SavedRecipesContextProvider>
+              <Header />
+                {children}
+            </SavedRecipesContextProvider>
+          </FavoriteCategoryContextProvider>
         </UserContextProvider>
       </body>
     </html>

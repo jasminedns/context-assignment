@@ -12,7 +12,7 @@ const ExploreRecipesPage = async ({ params }: Params) => {
     const recipeData = data.meals;
 
     return (
-      <div className="w-full my-4 border-1 border-[#26252246] rounded-4xl p-4 flex flex-row flex-wrap">
+      <div className="w-full my-4 main-border p-4 flex flex-row flex-wrap">
           { recipeData.map((item: any, index: number) =>             
               <RecipeCard key={index} {...item} />
           )}

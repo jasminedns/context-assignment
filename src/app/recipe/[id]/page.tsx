@@ -21,7 +21,7 @@ const RecipePage = async ({ params }: Params) => {
     }
 
     return (
-        <div className="mx-auto my-4 border-1 border-[#26252246] rounded-4xl p-4">
+        <div className="mx-auto my-4 main-border p-4">
             <div className="text-center">
                 <h2 className="bg-[#EE6352] inline-block text-[#FFFBF2] py-2 px-3 rounded-4xl text-sm">RECIPE</h2>
             </div>

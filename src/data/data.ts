@@ -16,7 +16,8 @@ export const users:userType[] = [
         name: "Pumpkin",
         favoriteCategory: "Beef",
         favoriteRecipes: [""]
-    },
+    }
+
 ]
 
 export const links:linkType[] = [

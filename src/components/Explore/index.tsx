@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
-type categoryType = {
+export type categoryType = {
     strCategory:string,
     strCategoryThumb:string
 }
@@ -51,7 +51,7 @@ const Explore = () => {
                                 <div 
                                     key={index}
                                     onClick={() => handleClick(item.strCategory)}
-                                    className="hover:bg-[#d9d4ca] w-[40%] md:w-[30%] border-1 border-[#26252246] rounded-4xl flex flex-col justify-center items-center"
+                                    className="hover:bg-[#d9d4ca] w-[40%] md:w-[30%] main-border flex flex-col justify-center items-center"
                                 >
                                     <img src={item.strCategoryThumb} alt={item.strCategory} className="m-3 w-[80%] h-auto"/>
                                     <h2 className="font-bold cursor-pointer text-sm uppercase my-4">{item.strCategory}</h2>

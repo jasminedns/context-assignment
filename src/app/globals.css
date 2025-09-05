@@ -12,3 +12,8 @@ body {
   margin: 0 32px;
   min-height: 100vh;
 }
+
+.main-border {
+  border: solid 1px #26252246;
+  border-radius: 32px; 
+}

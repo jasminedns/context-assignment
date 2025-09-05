@@ -1,7 +1,7 @@
 'use client';
 
 import { createContext, useContext, useState } from "react";
-import { savedRecipeContextType, savedRecipeType, UserContextType, userType } from "./types";
+import { preferredCategoryContextType, savedRecipeContextType, savedRecipeType, UserContextType, userType } from "./types";
 
 const UserContext =  createContext<UserContextType | null>(null);
 
@@ -41,3 +41,21 @@ export const useSavedRecipeContext = () => {
     return useContext(SavedRecipes)
 }
 
+const favoriteCategory = createContext<preferredCategoryContextType| null>(null);
+
+export const FavoriteCategoryContextProvider = (
+    { children } : { children: React.ReactNode}
+) => {
+
+    const [preferredCategory, setPreferredCategory] = useState<string | null>(null);
+
+    return (
+        <favoriteCategory.Provider value={{preferredCategory, setPreferredCategory}}>
+            {children}
+        </favoriteCategory.Provider>
+    )
+}
+
+export const useFavoriteCategoryContext = () => {
+    return useContext(favoriteCategory)
+}

@@ -6,7 +6,7 @@ export type userType = {
 
 export type UserContextType = {
     user: userType | null,
-    setUser: (user:userType) => void
+    setUser: (user:userType | null) => void
 }
 
 export type linkType = {
@@ -25,3 +25,7 @@ export type savedRecipeContextType = {
     setRecipes: (recipes:savedRecipeType[]) => void
 }
 
+export type preferredCategoryContextType = {
+    preferredCategory: string | null,
+    setPreferredCategory: (preferredCategory:string) => void
+}
