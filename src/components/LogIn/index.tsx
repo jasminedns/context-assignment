@@ -36,7 +36,7 @@ const LogIn = () => {
 
     return (
         <form className="flex flex-col justify-center items-center main-border shadow-md p-3">
-            <h2 className="text-4xl text-center p-3">Hi, log in to see the content!</h2>
+            <h2 className="text-4xl text-center p-3 md:p-5">Hi, log in to see the content!</h2>
             <div className="my-4 flex flex-col justify-center items-center">
                 <label htmlFor="username" className="font-bold">Username</label>
                 <input name="username" type="text" placeholder="username" className="main-border my-3 p-2" onChange={handleChange}/>
@@ -45,7 +45,7 @@ const LogIn = () => {
             </div>
             <button 
                 onClick={handleClick}
-                className="bg-[#F29C33] font-bold py-3 px-5 rounded-3xl cursor-pointer hover:bg-[#e2912f]"
+                className="bg-[#F29C33] font-bold py-3 px-5 rounded-3xl cursor-pointer hover:bg-[#e2912f] mb-5"
             >
                 Submit
             </button>

@@ -64,13 +64,13 @@ const RecipeCard = ({strMeal, strMealThumb, idMeal}:RecipeCardProps) => {
         <div className="lg:w-[25%] md:w-[40%] p-4">
             {   meal !== null 
                 ? 
-                    <div className="main-border">
+                    <div className="main-border relative">
                         <div>
                             <img src={meal.strMealThumb || strMealThumb} alt={`Image of ${meal.strMeal || strMeal}`} className="w-[100%] h-auto rounded-t-4xl"/>
                         </div>
-                        <div className="min-h-[210px] flex flex-col justify-around">
+                        <div className="min-h-[210px] flex flex-col justify-between">
                             <h4 className="text-2xl text-center font-extrabold mt-3 p-2">{meal.strMeal || strMeal}</h4>
-                            <div className="flex flex-row justify-around items-center">
+                            <div className="absolute bottom-5 right-[15%] gap-x-5 flex flex-row justify-around items-center max-[310px]:flex-col">
                                 <button 
                                 onClick={handleClick}
                                     className="main-border py-2 px-4 cursor-pointer hover:bg-[#9FDC26] hover:border-[#262522] hover:font-bold"
