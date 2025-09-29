@@ -70,7 +70,7 @@ const RecipeCard = ({strMeal, strMealThumb, idMeal}:RecipeCardProps) => {
                         </div>
                         <div className="min-h-[210px] flex flex-col justify-between">
                             <h4 className="text-2xl text-center font-extrabold mt-3 p-2">{meal.strMeal || strMeal}</h4>
-                            <div className="absolute bottom-5 right-[15%] gap-x-5 flex flex-row justify-around items-center max-[310px]:flex-col">
+                            <div className="absolute bottom-5 right-[15%] lg:right-[22%] gap-x-5 flex flex-row justify-around items-center max-[310px]:flex-col">
                                 <button 
                                 onClick={handleClick}
                                     className="main-border py-2 px-4 cursor-pointer hover:bg-[#9FDC26] hover:border-[#262522] hover:font-bold"
